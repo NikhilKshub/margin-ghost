@@ -4,7 +4,7 @@ extends Node2D
 @export var line_scene: PackedScene
 @export var dot_scene: PackedScene
 var current_line = null
-var point_gap = 20.0
+var point_gap = 100.0
 
 func add_spot(spot):
 	current_line.add_point(spot)
