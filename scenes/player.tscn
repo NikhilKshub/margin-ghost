@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b7s61vxt8ndct"]
+
+[ext_resource type="Texture2D" uid="uid://irh50c7nc5dt" path="res://icon.svg" id="1_3vyb7"]
+
+[node name="Player" type="Node2D" unique_id=304202585]
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=234328649]
+texture = ExtResource("1_3vyb7")
+offset = Vector2(0, -64)

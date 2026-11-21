@@ -9,6 +9,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			current_line = line_scene.instantiate()
+			current_line.add_to_group("lines")
 			add_child(current_line)
 			current_line.add_point(get_global_mouse_position())
 			
