@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://d12w7gftpsylc"]
 
 [node name="Line" type="Line2D" unique_id=384656491]
-points = PackedVector2Array(827, 475)
 width = 6.0
 joint_mode = 2
 begin_cap_mode = 2
