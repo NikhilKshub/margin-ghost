@@ -20,3 +20,13 @@ func find_spot(direction):
 				best_distance = position.distance_to(spot)
 	return best_spot
 	
+func hop(direction):
+	var spot = find_spot(direction)
+	if spot == null:
+		return 
+	is_hopping = true
+	var tween = create_tween()
+	tween.tween_property(self, "position", spot, 0.4)
+	await tween.finished
+	is_hopping = false
+	
