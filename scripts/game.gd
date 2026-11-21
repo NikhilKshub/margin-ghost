@@ -2,8 +2,15 @@ extends Node2D
 
 
 @export var line_scene: PackedScene
+@export var dot_scene: PackedScene
 var current_line = null
 var point_gap = 20.0
+
+func add_spot(spot):
+	current_line.add_point(spot)
+	var dot = dot_scene.instantiate()
+	dot.position = spot
+	current_line.add_child(dot)
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -11,7 +18,7 @@ func _input(event):
 			current_line = line_scene.instantiate()
 			current_line.add_to_group("lines")
 			add_child(current_line)
-			current_line.add_point(get_global_mouse_position())
+			add_spot(get_global_mouse_position())
 			
 		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			current_line = null
@@ -21,4 +28,4 @@ func _input(event):
 		var mouse_position = get_global_mouse_position()
 		
 		if last_point.distance_to(mouse_position) >= point_gap:
-			current_line.add_point(mouse_position)
+			add_spot(mouse_position)
