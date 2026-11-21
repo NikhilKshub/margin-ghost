@@ -18,6 +18,9 @@ func add_spot(spot):
 	current_line.add_child(dot)
 
 func _input(event):
+	if event.is_action_pressed("restart"):
+		get_tree().reload_current_scene()
+		
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			current_line = line_scene.instantiate()
