@@ -5,6 +5,11 @@ extends Node2D
 @export var dot_scene: PackedScene
 var current_line = null
 var point_gap = 100.0
+@onready var player = $Player
+@onready var entry_gate = $EntryGate
+
+func _ready():
+	player.position = entry_gate.position
 
 func add_spot(spot):
 	current_line.add_point(spot)
