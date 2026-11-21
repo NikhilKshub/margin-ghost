@@ -27,5 +27,7 @@ func _input(event):
 		var last_point = current_line.get_point_position(current_line.get_point_count() - 1)
 		var mouse_position = get_global_mouse_position()
 		
-		if last_point.distance_to(mouse_position) >= point_gap:
-			add_spot(mouse_position)
+		while last_point.distance_to(mouse_position) >= point_gap:
+			var next = last_point + last_point.direction_to(mouse_position) * point_gap
+			add_spot(next)
+			last_point = next

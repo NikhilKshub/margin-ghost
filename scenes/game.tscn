@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dhfcbk8omld2l" path="res://scripts/game.gd" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://d12w7gftpsylc" path="res://scenes/line.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://biepfykbcunej" path="res://scenes/dot.tscn" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b7s61vxt8ndct" path="res://scenes/player.tscn" id="3_lnu2h"]
 
 [node name="game" type="Node2D" unique_id=1483147424]
 script = ExtResource("1_uwrxv")
 line_scene = ExtResource("2_yqjtg")
+dot_scene = ExtResource("3_lbhrr")
 
 [node name="Player" parent="." unique_id=304202585 instance=ExtResource("3_lnu2h")]
 position = Vector2(200, 500)
