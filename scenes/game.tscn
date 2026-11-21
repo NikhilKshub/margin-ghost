@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://d12w7gftpsylc" path="res://scenes/line.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://biepfykbcunej" path="res://scenes/dot.tscn" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b7s61vxt8ndct" path="res://scenes/player.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://b7u0v1ofm4hib" path="res://scenes/exit_gate.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://ds8bcwpuq577o" path="res://scenes/hazard.tscn" id="6_p57ef"]
 
 [node name="game" type="Node2D" unique_id=1483147424]
 script = ExtResource("1_uwrxv")
@@ -11,4 +13,13 @@ line_scene = ExtResource("2_yqjtg")
 dot_scene = ExtResource("3_lbhrr")
 
 [node name="Player" parent="." unique_id=304202585 instance=ExtResource("3_lnu2h")]
-position = Vector2(200, 500)
+position = Vector2(174.00002, 513)
+
+[node name="ExitGate" parent="." unique_id=429862495 instance=ExtResource("5_p57ef")]
+position = Vector2(1189, 95)
+
+[node name="EntryGate" type="Marker2D" parent="." unique_id=1185491990]
+position = Vector2(175, 513)
+
+[node name="Hazard" parent="." unique_id=339341105 instance=ExtResource("6_p57ef")]
+position = Vector2(638, 648)
