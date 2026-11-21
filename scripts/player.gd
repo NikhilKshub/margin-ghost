@@ -8,3 +8,15 @@ func _input(event):
 		hop(1)
 	if event.is_action_pressed("ui_left") and not is_hopping:
 		hop(-1)
+
+func find_spot(direction):
+	var best_spot = null
+	var best_distance = jump_range
+	for line in get_tree().get_nodes_in_group("lines"):
+		for i in range(line.get_point_count()):
+			var spot = line.get_point_position(i)
+			if(spot.x - position.x) * direction > 0 and position.distance_to(spot) < best_distance:
+				best_spot = spot
+				best_distance = position.distance_to(spot)
+	return best_spot
+	
