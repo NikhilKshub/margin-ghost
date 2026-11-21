@@ -155,6 +155,9 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_qlg0r"]
+radius = 14.0
+
 [node name="Player" type="Node2D" unique_id=304202585]
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_g2els")
@@ -165,5 +168,11 @@ scale = Vector2(0.3148149, 0.34109738)
 sprite_frames = SubResource("SpriteFrames_2m21h")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.38271883
+frame_progress = 0.07927348
 offset = Vector2(40, -533)
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1177390140]
+position = Vector2(0, -19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1495048092]
+shape = SubResource("CircleShape2D_qlg0r")
