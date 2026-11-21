@@ -5,6 +5,7 @@ var is_hopping = false
 var hop_time = 0.5
 var hop_height =210.0
 @onready var sprite = $Sprite2D
+@onready var start_y = sprite.position.y
 
 func _input(event):
 	if event.is_action_pressed("ui_right") and not is_hopping:
@@ -31,8 +32,8 @@ func hop(direction):
 	var tween = create_tween()
 	tween.tween_property(self, "position", spot, hop_time)
 	var lift = create_tween()
-	lift.tween_property(sprite, "position:y", -hop_height, hop_time / 2).set_trans(Tween.TRANS_SINE)
-	lift.tween_property(sprite, "position:y", 0, hop_time / 2).set_trans(Tween.TRANS_SINE)
+	lift.tween_property(sprite, "position:y", start_y - hop_height, hop_time / 2).set_trans(Tween.TRANS_SINE)
+	lift.tween_property(sprite, "position:y", start_y, hop_time / 2).set_trans(Tween.TRANS_SINE)
 	await tween.finished
 	is_hopping = false
 	

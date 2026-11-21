@@ -33,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_srsb4"]
-size = Vector2(60, 81)
+size = Vector2(100, 103.5)
 
 [node name="ExitGate" type="Area2D" unique_id=429862495]
 script = ExtResource("1_sdvst")
@@ -42,10 +42,10 @@ script = ExtResource("1_sdvst")
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_srsb4")
 autoplay = "default"
-frame_progress = 0.03221574
+frame_progress = 0.79539233
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=304846178]
-position = Vector2(-6, 16.5)
+position = Vector2(-6, 8.25)
 shape = SubResource("RectangleShape2D_srsb4")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
