@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://umkfm6gcx8fl"]
+
+[ext_resource type="Texture2D" uid="uid://cterp3qtoo0vv" path="res://assets/SunFaceSpriteSheet.png" id="1_cojbh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdjia"]
+atlas = ExtResource("1_cojbh")
+region = Rect2(0, 0, 724, 724)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gpmc"]
+atlas = ExtResource("1_cojbh")
+region = Rect2(724, 0, 724, 724)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtvjq"]
+atlas = ExtResource("1_cojbh")
+region = Rect2(1448, 0, 724, 724)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_srsb4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdjia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gpmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtvjq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Sun" type="Node2D" unique_id=1784402562]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1774387579]
+position = Vector2(-11.000008, -5)
+scale = Vector2(0.23294474, 0.18806352)
+sprite_frames = SubResource("SpriteFrames_srsb4")
+autoplay = "default"
+frame_progress = 0.6976924

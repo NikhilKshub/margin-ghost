@@ -29,11 +29,17 @@ func hop(direction):
 	if spot == null:
 		return 
 	is_hopping = true
+	if direction > 0:
+		sprite.flip_h = false
+	elif direction < 0:
+		sprite.flip_h = true
+	sprite.play("jump")
 	var tween = create_tween()
 	tween.tween_property(self, "position", spot, hop_time)
 	var lift = create_tween()
 	lift.tween_property(sprite, "position:y", start_y - hop_height, hop_time / 2).set_trans(Tween.TRANS_SINE)
 	lift.tween_property(sprite, "position:y", start_y, hop_time / 2).set_trans(Tween.TRANS_SINE)
 	await tween.finished
+	sprite.play("idle")
 	is_hopping = false
 	

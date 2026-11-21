@@ -116,9 +116,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f1ej7")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"jump",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -159,21 +159,21 @@ animations = [{
 radius = 60.0
 
 [node name="Player" type="Node2D" unique_id=304202585]
+position = Vector2(1, 1)
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1696629027]
-position = Vector2(9.999998, -13.333334)
+position = Vector2(2.861023e-06, 3.333313)
 scale = Vector2(0.3148149, 0.34109738)
 sprite_frames = SubResource("SpriteFrames_2m21h")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.7623822
 offset = Vector2(40, -533)
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1177390140]
-position = Vector2(0, -150)
+position = Vector2(6.666667, -83.33331)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1495048092]
-position = Vector2(20, -3.3333333)
+position = Vector2(-6.666667, 6.666626)
 shape = SubResource("CircleShape2D_qlg0r")
