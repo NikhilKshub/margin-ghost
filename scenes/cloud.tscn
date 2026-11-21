@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://br8d7sxngbp22"]
+
+[ext_resource type="Texture2D" uid="uid://1mtje7squx85" path="res://assets/cloud_spritesheet.png" id="1_vlwrh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kyfr"]
+atlas = ExtResource("1_vlwrh")
+region = Rect2(0, 0, 360, 195)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1qj5"]
+atlas = ExtResource("1_vlwrh")
+region = Rect2(360, 0, 360, 195)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fubt3"]
+atlas = ExtResource("1_vlwrh")
+region = Rect2(720, 0, 360, 195)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_srsb4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kyfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1qj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fubt3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="cloud" type="Node2D" unique_id=2070494279]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=773745885]
+sprite_frames = SubResource("SpriteFrames_srsb4")
+autoplay = "default"
+frame_progress = 0.10323209

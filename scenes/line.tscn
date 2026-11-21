@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d12w7gftpsylc"]
 
 [node name="Line" type="Line2D" unique_id=384656491]
+z_index = 3
 width = 6.0
 default_color = Color(0.16078432, 0.16078432, 0.16078432, 1)
 joint_mode = 2
