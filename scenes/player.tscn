@@ -160,10 +160,10 @@ scale = Vector2(0.3, 0.3)
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1696629027]
-position = Vector2(-6.666649, 6.666649)
+position = Vector2(9.999998, -13.333334)
 scale = Vector2(0.3148149, 0.34109738)
 sprite_frames = SubResource("SpriteFrames_2m21h")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.4837047
-offset = Vector2(0, -64)
+frame_progress = 0.38271883
+offset = Vector2(40, -533)
