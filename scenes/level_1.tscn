@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7s61vxt8ndct" path="res://scenes/player.tscn" id="4_e3sih"]
 [ext_resource type="Texture2D" uid="uid://dasoydnydrffo" path="res://assets/level_1_bg.png" id="4_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://b7u0v1ofm4hib" path="res://scenes/exit_gate.tscn" id="5_2y5yt"]
+[ext_resource type="PackedScene" uid="uid://dnrikk2b6rqxj" path="res://scenes/level_2.tscn" id="7_e3sih"]
 [ext_resource type="PackedScene" uid="uid://umkfm6gcx8fl" path="res://scenes/sun.tscn" id="7_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://br8d7sxngbp22" path="res://scenes/cloud.tscn" id="8_15mv3"]
 
@@ -28,6 +29,7 @@ position = Vector2(92, 469)
 [node name="ExitGate" parent="." unique_id=429862495 instance=ExtResource("5_2y5yt")]
 z_index = 4
 position = Vector2(1203, 133)
+next_level = ExtResource("7_e3sih")
 
 [node name="EntryGate" type="Marker2D" parent="." unique_id=1185491990]
 z_index = 4
