@@ -56,3 +56,19 @@ scale = Vector2(0.45, 0.45)
 position = Vector2(476.00006, 103.99999)
 rotation = -0.1308997
 scale = Vector2(0.4, 0.4)
+
+[node name="HowToPlay2" type="Label" parent="." unique_id=1466900388]
+modulate = Color(0.6940271, 0.42711982, 0.2301873, 0.6784314)
+z_index = 5
+offset_left = 60.0
+offset_top = 195.0
+offset_right = 528.0
+offset_bottom = 328.0
+theme_override_colors/font_color = Color(0.16078432, 0.16078432, 0.16078432, 1)
+theme_override_font_sizes/font_size = 22
+text = "- Draw a path with your pencil.
+- Hop along the dots with ← and → OR A & D.
+- Press R to restart."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
