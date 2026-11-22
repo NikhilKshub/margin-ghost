@@ -9,7 +9,7 @@ Watch out, though. The paths aren't always safe.
 | Input | Action |
 |---|---|
 | Hold left mouse button and drag | Draw a pencil path |
-| Left / Right arrow keys | Hop to the nearest dot on that side |
+| Left / Right arrow OR A/D keys | Hop to the nearest dot on that side |
 | R | Restart the current level |
 
 Draw a path from the entry gate towards the exit gate. Your ghost can only hop between dots on the lines you draw.
