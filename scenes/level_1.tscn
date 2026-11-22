@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bnfcldq5hsh76"]
 
 [ext_resource type="Script" uid="uid://dhfcbk8omld2l" path="res://scripts/game.gd" id="1_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://d12w7gftpsylc" path="res://scenes/line.tscn" id="2_pa8r4"]
+[ext_resource type="PackedScene" uid="uid://biepfykbcunej" path="res://scenes/dot.tscn" id="3_15mv3"]
 [ext_resource type="PackedScene" uid="uid://b7s61vxt8ndct" path="res://scenes/player.tscn" id="4_e3sih"]
 [ext_resource type="Texture2D" uid="uid://dasoydnydrffo" path="res://assets/level_1_bg.png" id="4_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://b7u0v1ofm4hib" path="res://scenes/exit_gate.tscn" id="5_2y5yt"]
@@ -9,6 +11,8 @@
 
 [node name="game" type="Node2D" unique_id=1483147424]
 script = ExtResource("1_fcfvj")
+line_scene = ExtResource("2_pa8r4")
+dot_scene = ExtResource("3_15mv3")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=814512972]
 modulate = Color(0.96511227, 0.80243635, 0.6049045, 1)
