@@ -127,7 +127,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a8ls1")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"starryidle",
 "speed": 3.0
 }, {
@@ -167,7 +167,7 @@ script = ExtResource("1_g2els")
 position = Vector2(2.861023e-06, 3.333313)
 scale = Vector2(0.3148149, 0.34109738)
 sprite_frames = SubResource("SpriteFrames_2m21h")
-animation = &"jump"
+animation = &"starryidle"
 autoplay = "idle"
 offset = Vector2(40, -533)
 

@@ -8,6 +8,7 @@ var hop_height =210.0
 @onready var start_y = sprite.position.y
 var current_dot = null
 var is_falling = false
+var on_dot = false
 
 func _input(event):
 	if event.is_action_pressed("ui_right") and not is_hopping:
@@ -39,17 +40,18 @@ func hop(direction):
 	sprite.play("jump")
 	var tween = create_tween()
 	tween.tween_property(self, "global_position", dot.global_position, hop_time)
-	current_dot = dot
 	var lift = create_tween()
 	lift.tween_property(sprite, "position:y", start_y - hop_height, hop_time / 2).set_trans(Tween.TRANS_SINE)
 	lift.tween_property(sprite, "position:y", start_y, hop_time / 2).set_trans(Tween.TRANS_SINE)
 	await tween.finished
+	current_dot = dot
+	on_dot = true
 	sprite.play("idle")
 	is_hopping = false
 	
 
 func _process(delta):
-	if current_dot != null and not is_hopping and not is_falling and not is_instance_valid(current_dot):
+	if on_dot and not is_hopping and not is_falling and not is_instance_valid(current_dot):
 		fall()
 		
 func fall():

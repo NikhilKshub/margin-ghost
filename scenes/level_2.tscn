@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bliybntkpbf0g" path="res://assets/level_2.png" id="4_y0kc7"]
 [ext_resource type="PackedScene" uid="uid://b7u0v1ofm4hib" path="res://scenes/exit_gate.tscn" id="5_que50"]
 [ext_resource type="PackedScene" uid="uid://ds8bcwpuq577o" path="res://scenes/hazard.tscn" id="6_hey2k"]
+[ext_resource type="PackedScene" uid="uid://bi6d7n8e6j2ux" path="res://scenes/end.tscn" id="7_que50"]
+[ext_resource type="PackedScene" uid="uid://ht7j1ab2ynj4" path="res://scenes/trigger.tscn" id="8_6cvei"]
+[ext_resource type="PackedScene" uid="uid://6jkpfbmpqivt" path="res://scenes/box.tscn" id="9_que50"]
 
 [node name="game" type="Node2D" unique_id=1483147424]
 script = ExtResource("1_wo48x")
@@ -25,9 +28,24 @@ position = Vector2(165, 365)
 
 [node name="ExitGate" parent="." unique_id=429862495 instance=ExtResource("5_que50")]
 position = Vector2(1218, 308)
+next_level = ExtResource("7_que50")
 
 [node name="EntryGate" type="Marker2D" parent="." unique_id=1185491990]
 position = Vector2(165, 366)
 
 [node name="Hazard" parent="." unique_id=339341105 instance=ExtResource("6_hey2k")]
-position = Vector2(638, 648)
+position = Vector2(515, 545)
+scale = Vector2(23, 2)
+
+[node name="Hazard2" parent="." unique_id=485703347 instance=ExtResource("6_hey2k")]
+position = Vector2(950, 540)
+scale = Vector2(5.5, 2)
+
+[node name="Trigger" parent="." unique_id=964720359 node_paths=PackedStringArray("target") instance=ExtResource("8_6cvei")]
+position = Vector2(596, 326)
+target = NodePath("../Box")
+
+[node name="Box" parent="." unique_id=418113670 instance=ExtResource("9_que50")]
+position = Vector2(676, -110)
+land_y = 520.0
+half_width = 75.0

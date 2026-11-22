@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bi6d7n8e6j2ux"]
+
+[ext_resource type="Script" uid="uid://xxb0dk2blb73" path="res://scripts/end.gd" id="1_mwn6m"]
+
+[node name="End" type="Node2D" unique_id=481262057]
+script = ExtResource("1_mwn6m")
+
+[node name="EndingText" type="Label" parent="." unique_id=791862782]
+offset_left = 290.0
+offset_top = 250.0
+offset_right = 990.0
+offset_bottom = 470.0
+theme_override_colors/font_color = Color(0.16078432, 0.16078432, 0.16078432, 1)
+theme_override_font_sizes/font_size = 32
+text = "The end, for now.
+
+Thanks for playing!
+Press R to play again."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
