@@ -46,7 +46,7 @@ Be careful where you draw.
 - **Engine:** Godot Engine
 
 ## AI assistance
-Claude and ChatGPT was used for coding assistance like solving bugs, helping in implement complex features, guiding through the platform, explaining things and helping in concepts for code and solving bugs, fixing things like size, coordinate points. Other than that all the code is self written and assets were hand drawn 
+Claude and ChatGPT was used for coding assistance like solving bugs, helping in implement complex features, guiding through the platform, explaining things and helping in concepts for code and solving bugs, fixing things like size, coordinate points. Other than that all the code is self written and assets were hand drawn.
 
 ## Run it locally
 1. Install [Godot Engine 4.7](https://godotengine.org/download).
