@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://6jkpfbmpqivt"]
+
+[ext_resource type="Texture2D" uid="uid://ds7lyn1pewvl2" path="res://assets/boxmain.png" id="1_3inec"]
+[ext_resource type="Script" uid="uid://cfgde6p41afjx" path="res://scripts/box.gd" id="1_ks2v0"]
+[ext_resource type="PackedScene" uid="uid://d12w7gftpsylc" path="res://scenes/line.tscn" id="2_c2ln5"]
+
+[node name="Box" type="Node2D" unique_id=418113670]
+script = ExtResource("1_ks2v0")
+line_scene = ExtResource("2_c2ln5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=482547964]
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("1_3inec")
