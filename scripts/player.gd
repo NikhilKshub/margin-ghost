@@ -16,13 +16,12 @@ func _input(event):
 func find_spot(direction):
 	var best_spot = null
 	var best_distance = jump_range
-	for line in get_tree().get_nodes_in_group("lines"):
-		for i in range(line.get_point_count()):
-			var spot = line.get_point_position(i)
-			if(spot.x - position.x) * direction > 0 and position.distance_to(spot) < best_distance:
-				best_spot = spot
-				best_distance = position.distance_to(spot)
-	return best_spot
+	for dot in get_tree().get_nodes_in_group("dots"):
+		var spot = dot.global_position
+		if(spot.x - position.x) * direction > 0 and position.distance_to(spot) < best_distance:
+			best_spot = spot
+			best_distance = position.distance_to(spot)
+	return best_spot 
 	
 func hop(direction):
 	var spot = find_spot(direction)
