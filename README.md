@@ -17,7 +17,7 @@ You cannot freely walk or jump around the level. Every movement depends on the p
 Be careful where you draw. 
 
 ## Features
-- Hand-drawn notebook-style environments and artwork.
+- Hand drawn notebook-style environments and artwork.
 - Custom character with idle, walking, jumping and special animations.
 - Draw-your-own-path gameplay with evenly spaced dots.
 - Smooth hopping with a jumping arc.
